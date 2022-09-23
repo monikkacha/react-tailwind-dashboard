@@ -19,6 +19,7 @@ export const ContextProvider = ({ children }) => {
     const [themeSettings, setThemeSettings] = useState(false)
 
     const handleClick = (clicked) => {
+        return
         setIsClicked({ ...initState, [clicked]: true })
     }
 
