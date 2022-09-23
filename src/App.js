@@ -2,13 +2,16 @@ import React, { useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { FiSettings } from 'react-icons/fi'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
-import './app.css'
+import './App.css'
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components'
 import { Ecommerce, Order, Calander, Employees, Stacked, Pyramid, Customers, Kanban, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Line } from './pages'
+import { useStateContext } from './contexts/ContextProvider'
 
 const App = () => {
-    const activeMenu = true;
+
+    const { activeMenu } = useStateContext();
+
     return (
         <div>
             <BrowserRouter>
